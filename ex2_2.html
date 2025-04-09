@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site das Armys</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Estilização do efeito de glitter */
+        .glitter-text {
+            font-size: 40px;
+            font-weight: bold;
+            text-align: center;
+            background: linear-gradient(45deg, rgb(187, 18, 187), #800080, #a020f0, rgb(187, 18, 187));
+            background-size: 400% 400%;
+            -webkit-background-clip: text;
+            color: transparent;
+            animation: glitter 3s infinite linear;
+        }
+
+        @keyframes glitter {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Estilização do menu */
+        nav ul {
+            list-style: none;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: rgb(187, 18, 187);
+        }
+
+        /* Estilização das seções */
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Mural de imagens */
+        .mural-gallery {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+
+        .mural-gallery img {
+            width: 200px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .mural-gallery img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Estilização do rodapé */
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            margin-top: 20px;
+        }
+
+        /* Estilo do Card */
+        .card {
+            width: 342px;
+            height: 184px;
+            position: relative;
+            padding: 20px;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin: 20px auto;
+            border-radius: 10px;
+        }
+
+        .background {
+            background: linear-gradient(90deg, #5936B4 0%, #362A84 100%);
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            border-radius: 10px;
+        }
+
+        .cloud {
+            position: absolute;
+            right: 0;
+            top: -12px;
+        }
+
+        .cloud svg {
+            height: 120px;
+        }
+
+        .card .main-text {
+            font-size: 48px;
+            z-index: 2;
+        }
+
+        .card .info {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .card .info .text-gray {
+            color: rgba(235, 235, 245, 0.60);
+        }
+
+        .card .info .info-right {
+            align-self: flex-end;
+        }
+    </style>
+</head>
+<body>
+    <div class="tudo">
+        <header>
+            <h1 class="glitter-text">Seja muito bem-vinda, Army!!!</h1>
+        </header>
+        
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#mural">Mural</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <section id="home">
+                <h2 class="glitter-text">Home</h2>
+                <p>Site destinado a todas as Armys que estão morrendo de saudades dos nossos meninos.</p>
+                <p>Aqui você vai encontrar fotos e deixar recadinhos.</p>
+            </section>
+
+            <section id="mural">
+                <h2 class="glitter-text">Mural</h2>
+                <p>Confira algumas imagens dos nossos meninos!</p>
+                
+                <div class="mural-gallery">
+                    <img src="https://img.wattpad.com/b138d29b59ea508f8613e0fed790f68609e2301c/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f7279496d6167652f57354d35666631365944323852413d3d2d313834302e313532396566636462303264613666663930353431333832333638352e6a7067?s=fit&w=720&h=720" alt="Foto do BTS">
+                    
+                    <img src="https://mundoasiaticodapolly.com.br/wp-content/uploads/2024/01/bts.webp" alt="BTS sendo maravilhosos">
+                    
+                    <img src="https://i.pinimg.com/1200x/10/ec/56/10ec568d47485b8823d9137ef4b5ca39.jpg" alt="Logo BTS">
+                </div>
+            </section>
+
+            <section id="contato">
+                <h2 class="glitter-text">Contato</h2>
+                <p>Entre em contato conosco pelo e-mail army@army.com.br</p>
+            </section>
+
+            <!-- Nova seção com os cards -->
+            <section id="cards">
+                <div class="card">
+                    <div class="background"></div>
+                    <div class="main-text">BTS FOREVER</div>
+                    <div class="info">
+                        <span class="text-gray">Armys unidas jamas serão vencidas</span>
+                        <span class="info-right">Não se esqueçam nunca das palavras dos nossos meninos</span>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Site das Armys. Todos os direitos reservados.</p>
+        </footer>
+    </div>
+</body>
+</html>
